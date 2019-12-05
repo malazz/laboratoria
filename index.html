@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" type="text/css">
+	<title> Trivia de Laboratoria</title>
+	<style type="text/css" media="all">
+		h3,h4 {display: inline;}</style>
+	
+
+</head>
+
+<body>
+	<div class="col-nd-3 center-block quitar-float text-center espacio-arriba">
+		<div id="bienvenida" class="">
+		<h1 class="rosado"> ¡Bienvenidx a la trivia de Laboratoria! </h1>
+		<h2 class="pacifico rosadoosc"> ¿Cuál es tu nombre? </h2>
+			<input type="text" id="nombre" value="">
+			<br><br>	
+			<button onclick="siguiente()" class="rectangulito"> siguiente </button>
+		</div>	
+
+		<div id="seleccion" class="" >
+			<div class="col-nd-3 center-block quitar-float text-center espacio-arriba">
+				<div class="line-container">
+					 <div>
+						<h3 class="rosado"> ¡ Hola </h3>
+						<h3 class="rosado" id="saludo"></h3> 
+						<h3 class="rosado">!</h3>
+					</div>
+				</div>
+						
+						<h4 class="pacifico rosadoosc"> Ahora elige el tema de la trivia </h4>
+						<br><br>
+						<button onclick="opc1()" class="rectangulito espacio-derecha"> Frontend </button>
+						<button onclick="opc2()" class="rectangulito espacio-derecha"> UX </button>
+			</div>		
+		</div>	
+
+		<div id="opc1Pre1" class="">
+			<div class="col-nd-3 center-block quitar-float text-center espacio-arriba">
+				<h2 class="pacifico rosadoosc" id="FEP1"> O1P1. ¿Cuál es el lenguaje para escribir la estructura de las páginas web?</h2>
+				<br>
+				<div onclick="respuesta11_1()" id="P1O1" class="rectangulo" data-respuesta="1" > HTML</div>
+				<div onclick="respuesta11_2()" id="P1O2" class="rectangulo" data-respuesta="0"> CSS</div>
+				<div onclick="respuesta11_3()" id="P1O3" class="rectangulo" data-respuesta="0"> JavaScript</div>
+				
+			</div>
+		</div>
+		<div id="opc1Pre2" class="">
+			<div class="col-nd-3 center-block quitar-float text-center espacio-arriba">
+				<h2 class="pacifico rosadoosc" id="FEP1"> O1P2. ¿Cuál es el lenguaje que describe la apariencia de una página web?</h2>
+				<br>
+				<div onclick="respuesta12_1()" id="P2O1" class="rectangulo" data-respuesta="0"> HTML</div>
+				<div onclick="respuesta12_2()" id="P2O2" class="rectangulo" data-respuesta="1"> CSS</div>
+				<div onclick="respuesta12_3()" id="P2O3" class="rectangulo" data-respuesta="0"> JavaScript</div>				
+			</div>
+		</div>
+
+		<div id="opc1Pre3" class="">
+			<div class="col-nd-3 center-block quitar-float text-center espacio-arriba">
+				<h2 class="pacifico rosadoosc" id="FEP1"> O1P3. ¿Cuál es el lenguaje que se utiliza principalmente para crear páginas web dinámicas? </h2>
+				<br>
+				<div onclick="respuesta13_1()" id="P3O1" class="rectangulo" data-respuesta="0"> HTML</div>
+				<div onclick="respuesta13_2()" id="P3O2" class="rectangulo" data-respuesta="0"> CSS</div>
+				<div onclick="respuesta13_3()" id="P3O3" class="rectangulo" data-respuesta="1"> JavaScript</div>
+			</div>
+		</div>
+
+
+		<div id="opc2Pre1" class="">
+			<div class="col-nd-3 center-block quitar-float text-center espacio-arriba">
+				<h2 class="pacifico rosadoosc" id="FEP1"> O2P1. ¿Cuál es un concepto clave para entender User Experience Design?</h2>
+				<br>
+				<div onclick="respuesta1_o2p1()" id="R1P1O2" class="rectangulo" data-respuesta="0"> Responsive design</div>
+				<div onclick="respuesta2_o2p1()" id="R2P1O2" class="rectangulo" data-respuesta="0"> Tener mejores productos digitales</div>
+				<div onclick="respuesta3_o2p1()" id="R3P1O2" class="rectangulo" data-respuesta="1"> Resolver necesidades de los usuarios</div>
+				<br>
+			</div>
+		</div>
+
+		<div id="opc2Pre2" class="">
+			<div class="col-nd-3 center-block quitar-float text-center espacio-arriba">
+				<h2 class="pacifico rosadoosc" id="FEP1"> O2P2. ¿Para crear un producto digital en el mundo de hoy que requieres?</h2>
+				<br>
+				<div  onclick="respuesta1_o2p2()" id="R1P2O2" class="rectangulo" data-respuesta="0"> Un programador</div>
+				<div  onclick="respuesta2_o2p2()" id="R2P2O2" class="rectangulo" data-respuesta="0"> Un front-end y un back-end developer</div>
+				<div  onclick="respuesta3_o2p2()" id="R3P2O2" class="rectangulo" data-respuesta="1"> Un equipo multidisciplinario</div>
+				<br>
+			
+			</div>
+		</div>
+
+		<div id="opc2Pre3" class="">
+			<div class="col-nd-3 center-block quitar-float text-center espacio-arriba">
+				<h2 class="pacifico rosadoosc" id="FEP1"> O2P3. ¿Cuáles no es una etapa en el desarrollo de un producto digital según Laboratoria?</h2>
+				<br>
+				<div  onclick="respuesta1_o2p3()" id="R1P3O2" class="rectangulo" data-respuesta="0"> Crecimiento</div>
+				<div  onclick="respuesta2_o2p3()" id="R2P3O2" class="rectangulo" data-respuesta="1"> Retrospectiva</div>
+				<div  onclick="respuesta3_o2p3()" id="R3P3O2" class="rectangulo" data-respuesta="0"> Diseño de la experiencia</div>
+				<br>
+			</div>
+		</div> 
+
+		<div id="resultado" class="">
+			<div class="col-nd-3 center-block quitar-float text-center espacio-arriba">
+		
+		<div>
+			<h4 class="rosado">¡ Acertaste </h4>
+			<h4 class="rosado" id="acumulado"></h4> 
+			<h4 class="rosado">/3!</h4>			
+		</div>	
+
+		<div>
+			<div id="r"   class="respuesta"></div>
+			<div id="rr"  class="respuesta"></div>
+			<div id="rrr" class="respuesta"></div> 
+			<br>
+		</div>		
+		
+
+		<div>
+						
+			<h4 class="pacifico">¡Sigue jugando!</h4>	
+			<br>			
+			<button onclick="opc1()" class="rectangulito espacio-derecha"> Frontend </button>
+			<button onclick="opc2()" class="rectangulito espacio-derecha"> UX </button>						
+		</div>
+				
+				
+			</div>
+		</div>
+	</div>
+	<script src="logica.js"></script>
+</body>
+
+</html>
